@@ -13,25 +13,48 @@ var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var lowerCaseOpt = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCaseOpt = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numbersOpt = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var symbolsOpt = ["#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "|", "~"];
+//Arrays for password content
+var lowerAlpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var symbols = ["#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "|", "~"];
 
-var getRandomLower = lowerCaseOpt[Math.floor(Math.random() * lowerCaseOpt.length)];
-var getRandomUpper = upperCaseOpt[Math.floor(Math.random() * upperCaseOpt.length)];
-var getRandomNumber = numbersOpt[Math.floor(Math.random() * numbersOpt.length)];
-var getRandomSymbol = symbolsOpt[Math.floor(Math.random() * symbolsOpt.length)];
+//Generating random charachters
+var getRandomLower = lowerAlpha[Math.floor(Math.random() * lowerAlpha.length)];
+var getRandomUpper = upperAlpha[Math.floor(Math.random() * upperAlpha.length)];
+var getRandomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+var getRandomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
 console.log(getRandomLower)
 console.log(getRandomUpper)
 console.log(getRandomNumber)
 console.log(getRandomSymbol)
 
+//function to determine contents of the password
 function writePassword() {
     window.alert("Hello! Please answer the following questions to generate your own personalized password.");
-    window.prompt("How many charachters would you like in your password? Please select a number from 8-128.");
-    window.prompt("Would you like to include lowercase letters? Enter YES or NO.");
-    window.prompt("Would you like to include upper case letters? Enter YES or NO.");
-    window.prompt("Would you like to include numbers? Enter YES or NO.");
-    window.prompt("Would you like to include symbols? Enter YES or NO.");
+    var charCountSelect = window.prompt("How many charachters would you like in your password? Please select a number from 8-128.");
+    var lowerCaseSelect = window.prompt("Would you like to include lowercase letters? Enter YES or NO.");
+    var upperCaseSelect = window.prompt("Would you like to include upper case letters? Enter YES or NO.");
+    var numberSelect = window.prompt("Would you like to include numbers? Enter YES or NO.");
+    var symbolSelect = window.prompt("Would you like to include symbols? Enter YES or NO.");
+
+    if (lowerCaseSelect) {
+
+    }
+
+    if (upperCaseSelect) {
+
+    }
+
+    if (numberSelect) {
+
+    }
+
+    if (symbolSelect) {
+
+    }
+    
+    for (var i = 0; i < charCountSelect; i++) {
+
+    }
 } 
