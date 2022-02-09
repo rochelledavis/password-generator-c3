@@ -2,13 +2,13 @@
 var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -30,31 +30,36 @@ console.log(getRandomNumber)
 console.log(getRandomSymbol)
 
 //function to determine contents of the password
-function writePassword() {
+function generatePassword() {
     window.alert("Hello! Please answer the following questions to generate your own personalized password.");
-    var charCountSelect = window.prompt("How many charachters would you like in your password? Please select a number from 8-128.");
+    var charCountSelect = parseInt(window.prompt("How many charachters would you like in your password? Please select a number from 8-128."));
     var lowerCaseSelect = window.prompt("Would you like to include lowercase letters? Enter YES or NO.");
     var upperCaseSelect = window.prompt("Would you like to include upper case letters? Enter YES or NO.");
     var numberSelect = window.prompt("Would you like to include numbers? Enter YES or NO.");
     var symbolSelect = window.prompt("Would you like to include symbols? Enter YES or NO.");
 
-    if (lowerCaseSelect) {
+    var selectedCharacters = []
 
+    if (lowerCaseSelect) {
+        selectedCharacters.concat(lowerAlpha)
     }
 
     if (upperCaseSelect) {
-
+        selectedCharacters.concat(upperAlpha)
     }
 
     if (numberSelect) {
+        selectedCharacters.concat(numbers)
 
     }
 
     if (symbolSelect) {
-
+        selectedCharacters.concat(symbols)
     }
-    
+    var password = ""
     for (var i = 0; i < charCountSelect; i++) {
-
+        var getRandomCharacter = selectedCharacters[Math.floor(Math.random() * selectedCharacters.length)];
+        password += getRandomCharacter
     }
+    return password
 } 
