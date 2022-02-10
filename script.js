@@ -10,15 +10,6 @@ var upperAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var symbols = ["#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "|", "~"];
 
-//Generating random charachters
-// var getRandomLower = lowerAlpha[Math.floor(Math.random() * lowerAlpha.length)];
-// var getRandomUpper = upperAlpha[Math.floor(Math.random() * upperAlpha.length)];
-// var getRandomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-// var getRandomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-// console.log(getRandomLower)
-// console.log(getRandomUpper)
-// console.log(getRandomNumber)
-// console.log(getRandomSymbol)
 
 //function to determine contents of the password
 function generatePassword() {
@@ -41,6 +32,15 @@ function generatePassword() {
     console.log(symbolSelect)
 
     var selectedCharacters = []
+
+    if (!lowerCaseSelect, !upperCaseSelect, !numberSelect, !symbolSelect) {
+        window.alert("You need to make at least one selection. Please try again")
+         var lowerCaseSelect = window.confirm("Would you like to include lowercase letters?");
+         var upperCaseSelect = window.confirm("Would you like to include upper case letters?");
+         var numberSelect = window.confirm("Would you like to include numbers?");
+         var symbolSelect = window.confirm("Would you like to include symbols?");
+    }
+        
 
     if (lowerCaseSelect) {
         selectedCharacters = selectedCharacters.concat(lowerAlpha)
