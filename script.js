@@ -15,7 +15,7 @@ var symbols = ["#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", 
 function generatePassword() {
     window.alert("Hello! Please answer the following questions to generate your own personalized password.");
     var charCountSelect = parseInt(window.prompt("How many characters would you like in your password? Please select a number from 8-128."));
-        while(charCountSelect <= 7 || charCountSelect >= 129) {
+        while(charCountSelect <= 7 || charCountSelect >= 129 || !charCountSelect) {
             window.alert("Please pick a number between 8-128.");
             var charCountSelect = parseInt(window.prompt("How many characters would you like in your password? Please select a number from 8-128."));
         }
